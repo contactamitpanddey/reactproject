@@ -1,14 +1,14 @@
 pipeline{
-    agent any
-
-  tools {nodejs "node"}
-    
+    agent{
+        label "node"
+    }
     stages{
         stage("Build"){
             steps{
-              
-            sh 'npm start'
+                sh 'npm start'
             }
+        }
+    }
 }
-}
-}
+
+           
