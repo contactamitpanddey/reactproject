@@ -1,9 +1,11 @@
 pipeline {
-    agent any
+    agent { label 'agentlinux' }
+
     stages {
-        stage('Build') {
+        stage('check version') {
             steps {
                 sh "npm --version"
+                sh "node --version"
             }
         
         }
